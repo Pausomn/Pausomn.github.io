@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Pau.Somn Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content from Pau.Somn Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    
+    <managingEditor>wxs_027720@qq.com (Pausomn)</managingEditor>
+    <webMaster>wxs_027720@qq.com (Pausomn)</webMaster>
+    
+    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
+    
+    
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+  </channel>
+</rss>

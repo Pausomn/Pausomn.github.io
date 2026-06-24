@@ -1,0 +1,600 @@
+<!doctype html>
+<html
+  lang="zh-CN" 
+  data-theme-mode="auto"
+  >
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/><title>
+  从零开始搓脑电：理解题意【ESRT项目笔记】 | Pausomn
+</title>
+<meta name="description" content="旅程总有一天会迎来终点，不必匆忙"/><script>
+  window.siteConfig = JSON.parse("{\"anchor\":{\"auto\":{\"enable\":false,\"length\":60},\"explicit\":{\"enable\":false,\"marker\":\"{#anchor-\",\"prefix\":\"anchor-\"}},\"anchor_icon\":null,\"base\":\"http://localhost:1313/\",\"clipboard\":{\"copyright\":{\"count\":100,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"icon_font\":\"4552607_ex15nbittbh\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
+  
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+<link
+    rel="preload"
+    href="//at.alicdn.com/t/c/font_4552607_ex15nbittbh.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  /><link rel="stylesheet" href="/css/loader.css" /><meta property="og:type" content="website" />
+  <meta property="og:title" content="从零开始搓脑电：理解题意【ESRT项目笔记】 | Pausomn" />
+  <meta
+    property="og:description"
+    content="旅程总有一天会迎来终点，不必匆忙"
+  />
+  <meta property="og:url" content="http://localhost:1313/post/notes1/" />
+  <meta
+    property="og:site_name"
+    content="Pau.Somn Blog"
+  />
+  <meta property="og:image" content="http://localhost:1313/images/life1.webp" />
+  <meta property="article:author" content="Pausomn" />
+  <meta property="article:published_time" content="2026-06-24T15:30:00&#43;08:00" />
+  <meta property="article:modified_time" content="2026-06-24T15:30:00&#43;08:00" /><meta property="article:tag" content="ESRT, 脑电图像" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/life1.webp" />
+<link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css"
+    integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei&#43;Zx/1oA/0l8ysE" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/katex@0.16.24/dist/katex.min.css"
+    integrity="sha384-tTgKLjMYmJr94v8qu2PE5MUGSMbyN2xiH266JUB3gpm8vnnJywd1dWSOEfrFz&#43;YI" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><script
+    src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"
+    
+    
+    
+    
+    integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css"
+    integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous"/></head>
+  <body><div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate"><img src="/images/taichi-blue.png" alt="loading" /></div><div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script><div id="copy-tooltip"></div>
+<div id="lang-tooltip">
+本文章没有找到对应的语言版本
+</div>
+<div id="heatmap-tooltip"></div><div id="container">
+      <div id="wrap"><div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation"><a class="main-nav-link-wrap" href="/"><div class='main-nav-icon icon '><img src="/images/cursor/home.png" alt="Home icon" class="" style="height: 1em;"></div><span class="main-nav-link"></span>
+      </a><a class="main-nav-link-wrap" href="/archives"><div class='main-nav-icon icon '><img src="/images/cursor/file.png" alt="Archives icon" class="" style="height: 1em;"></div><span class="main-nav-link"></span>
+      </a><a class="main-nav-link-wrap" href="/about"><div class='main-nav-icon icon '><img src="/images/cursor/person1.png" alt="About icon" class="" style="height: 1em;"></div><span class="main-nav-link"></span>
+      </a><a class="main-nav-link-wrap" href="https://winter-raymond.github.io"><div class='main-nav-icon icon '><img src="/images/cursor/friend.png" alt="Friend icon" class="" style="height: 1em;"></div><span class="main-nav-link"></span>
+      </a><a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation"></nav></div>
+<header id="header" aria-label="Site header"><picture></picture>
+    <img crossorigin="anonymous" fetchpriority="high" src="/images/life1.webp" alt="从零开始搓脑电：理解题意【ESRT项目笔记】"><div id="header-outer">
+    <div id="header-title"><span id="logo">
+            <h1 data-aos="slide-up">从零开始搓脑电：理解题意【ESRT项目笔记】</h1>
+          </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
+  </div>
+</header><div id="content"
+          aria-label="Page content"
+          class="sidebar-left"
+            ><aside id="sidebar" aria-label="Sidebar"><div class="sidebar-wrapper-container sticky"><div class="sidebar-wrapper">
+    <div
+      class="sidebar-wrap"
+      data-aos="fade-up"
+    ><div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class">
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#遇到不熟悉的项目">遇到不熟悉的项目</a></li>
+    <li><a href="#要学前人的智慧">要学前人的智慧</a></li>
+    <li><a href="#学习是消灭未知的途径">学习是消灭未知的途径</a></li>
+    <li><a href="#学完回来再看">学完回来再看</a></li>
+    <li><a href="#数学建模分析">数学建模分析</a></li>
+  </ul>
+</nav>
+</div></div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.webp"
+    data-sizes="auto"
+    alt="Pausomn"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">Pausomn</div>
+  <div class="sidebar-description">旅程总有一天会迎来终点，不必匆忙</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div><div class="sidebar-state-number">3</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>分类</div>
+    <div class="sidebar-state-number">
+      2
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>标签</div>
+    <div class="sidebar-state-number">3</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-bilibili sidebar-social-icon">
+        <a
+          href="https://space.bilibili.com/337420173"
+          itemprop="url"
+          target="_blank"
+          aria-label="bilibili"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-github sidebar-social-icon">
+        <a
+          href="https://github.com/Pausomn"
+          itemprop="url"
+          target="_blank"
+          aria-label="github"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-zhihu sidebar-social-icon">
+        <a
+          href="https://www.zhihu.com/people/returnxian-ren"
+          itemprop="url"
+          target="_blank"
+          aria-label="zhihu"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label=""
+      ></a><div class='sidebar-menu-icon icon '><img src="/images/cursor/home.png" alt="Home icon" class="" style="height: 1em;"></div><div class="sidebar-menu-link"></div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label=""
+      ></a><div class='sidebar-menu-icon icon '><img src="/images/cursor/file.png" alt="Archives icon" class="" style="height: 1em;"></div><div class="sidebar-menu-link"></div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label=""
+      ></a><div class='sidebar-menu-icon icon '><img src="/images/cursor/person1.png" alt="About icon" class="" style="height: 1em;"></div><div class="sidebar-menu-link"></div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="https://winter-raymond.github.io"
+        aria-label=""
+      ></a><div class='sidebar-menu-icon icon '><img src="/images/cursor/friend.png" alt="Friend icon" class="" style="height: 1em;"></div><div class="sidebar-menu-link"></div>
+    </div></div></div><div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div></div>
+  </div><div class="sidebar-widget"></div></div></aside>
+<section id="main" aria-label="Main content"><article
+  class="h-entry article"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <div
+    class="article-inner"
+    data-aos="fade-up"
+  >
+    <div class="article-meta"><div class="article-date">
+  <span
+    class="article-date-link icon-calendar"
+    data-aos="zoom-in"
+  >
+    <time datetime="2026-06-24 15:30:00 &#43;0800 CST" itemprop="datePublished"
+      >2026-06-24</time
+    >
+    <time style="display: none;" id="post-update-time"
+      >2026-06-24</time
+    >
+  </span><span
+      class="article-date-link icon-calendar-plus"
+      data-aos="zoom-in"
+    >
+      <time datetime="2026-06-24 15:30:00 &#43;0800 CST" itemprop="dateModified"
+        >2026-06-24</time
+      >
+    </span></div>
+</div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><p>博主在进行零一学院的ESRT(Enhanced Student Research Training)项目时选了这样一个课题：脑电图像和视频生成</p>
+<p>项目描述：</p>
+<p><em>本项目依托EEG视觉生成领域的核心研究理念，探索从脑电图像到动态视频的直接跨模态生成。借鉴其“无需文本中转”的意念可视化思路，突破EEG信号噪声、信息有限等固有挑战，构建大模型实现脑电表征与动态视觉内容的深层映射，为“所想即所见”的进阶探索提供新方向。</em></p>
+<h2 id="遇到不熟悉的项目">
+<a class="header-anchor" href="#%e9%81%87%e5%88%b0%e4%b8%8d%e7%86%9f%e6%82%89%e7%9a%84%e9%a1%b9%e7%9b%ae"></a>
+遇到不熟悉的项目
+</h2><p>脑电图像和视频生成。</p>
+<p>我反复念了几遍标题，尝试理解它的意思。如果我理解的没错的话，这个项目的目的是要将脑中所想的画面呈现为一段……视频？听起来有点科幻。我又读了几遍，确认我没有理解错。</p>
+<p>也就是说，我需要做一个项目，它能把你脑中的想象变成一段可观看的视频。好吧确实很科幻。</p>
+<p>说实话，刚拿到这个项目，我是感觉无从下手的，因为是一个全新的未知的领域。但据我的经验来说，<strong>了解的越多，心中的不确定就会越少</strong>，自信就会越多。这也许便是文献综述存在的意义。</p>
+<p>（DS:未知带来的不安，往往源于知识的匮乏，而知识，正是通过阅读和学习来获得的。）</p>
+<h2 id="要学前人的智慧">
+<a class="header-anchor" href="#%e8%a6%81%e5%ad%a6%e5%89%8d%e4%ba%ba%e7%9a%84%e6%99%ba%e6%85%a7"></a>
+要学前人的智慧
+</h2><p>下一步自然是寻找相关的文献。</p>
+<p>寻找论文的方法自然是问AI——不知何时起这种技术已经融入到人的观念里，成为了一种下意识的行为。</p>
+<p> Brain2Image、MindEye、MinD-Vis……各种论文，千奇百怪的名字带着长长的标题便出现了，不过我认为最具参考价值的应该是导师参与的<a href="https://arxiv.org/pdf/2306.16934">DreamDiffusion</a>这篇论文。</p>
+<p>读论文一开始当然是读不懂的，体会便是：</p>
+<p>每一个单词都认识，连成句的意思也知道，但因为缺乏必要的专业深度（或者专业常识）而感到一种生涩的眩晕感——大脑一时间处理不了如此多而密集的信息。</p>
+<p>我能感受到文章的表达很流畅，逻辑也很清晰，但依然读不懂。</p>
+<h2 id="学习是消灭未知的途径">
+<a class="header-anchor" href="#%e5%ad%a6%e4%b9%a0%e6%98%af%e6%b6%88%e7%81%ad%e6%9c%aa%e7%9f%a5%e7%9a%84%e9%80%94%e5%be%84"></a>
+学习是消灭未知的途径
+</h2><p>怎么办？那就去学吧。</p>
+<p>以我的基础来看，需要学的有三部分知识：</p>
+<p>(1)一部分是输入端需要的，脑电信号处理的知识；</p>
+<p>(2)另一部分是输出端需要的，图像生成的知识；</p>
+<p>(3)还有第三部分，通用的，人工智能基础课，深度学习相关内容。</p>
+<p>总结来说，三个方向的基础知识：脑电信号处理、图像生成模型、人工智能通识。</p>
+<p>从现在来看，当时主要的学习内容是：</p>
+<p>脑电图像处理：<strong>EEG处理（main）</strong>、FMRI处理</p>
+<p>图像生成模型：<strong>Diffusion模型（main）</strong>、GAN</p>
+<p>人工智能通用: <strong>深度学习（main）</strong>、<strong>Transformer</strong>、CLIP</p>
+<p>现在我可以用一个更加准确的词语来概括这些——<strong>技术栈</strong>。</p>
+<p>当然只学这些还是太嫩了，但奈何精力有限，只能先初步学一些知识来达到读论文的门槛。</p>
+<h2 id="学完回来再看">
+<a class="header-anchor" href="#%e5%ad%a6%e5%ae%8c%e5%9b%9e%e6%9d%a5%e5%86%8d%e7%9c%8b"></a>
+学完回来再看
+</h2><p>接下来回头看项目介绍，感觉清晰不少：</p>
+<p><em>本项目依托EEG视觉生成领域的核心研究理念，探索从脑电图像到动态视频的直接跨模态生成。借鉴其“无需文本中转”的意念可视化思路，突破EEG信号噪声、信息有限等固有挑战，构建大模型实现脑电表征与动态视觉内容的深层映射，为“所想即所见”的进阶探索提供新方向。</em></p>
+<h2 id="数学建模分析">
+<a class="header-anchor" href="#%e6%95%b0%e5%ad%a6%e5%bb%ba%e6%a8%a1%e5%88%86%e6%9e%90"></a>
+数学建模分析
+</h2><p>先抛开项目不谈，从数学的角度来分析，这个问题该怎么看待？</p>
+<p>脑电图像和视频生成。</p>
+<p>既然是数学问题，先明确输入和输出:</p>
+<p><strong>输入</strong>—脑电信号，<strong>输出</strong>——图像和视频。</p>
+<p>再明确<strong>函数</strong>，即将输入转化成输出的过程、工具。这部分便是项目要做的。</p>
+<p>接着我们对这几个量再明确一下：</p>
+<p><strong>输入</strong>—脑电信号：脑科学常见的有<em>CT</em>, <em>MRI</em>, <em>FMRI</em>, <em>PET</em>, <em>EEG</em>等几种信号样式，规范叫“结构影响与功能影像技术”。</p>
+<p>对于本项目，常用的为<strong>FMRI</strong>与<strong>EEG</strong>。两种信号的区别后面再说。</p>
+<p><strong>输出</strong>—图像和视频：很直白，不用多说。
+但我们：</p>
+<p>（1）可以推测一个结论：应当是先生成图像再生成视频，两者是个渐进的关系</p>
+<p>则问题转化为：</p>
+<p><em>脑电信号生成图像 + 图像生成视频</em></p>
+<p>后半部分应当是个自然的过程，先只关注前半部分，即：<strong>脑电信号生成图像</strong>。</p>
+<p>（2）关注的应当是生成图像和视频的方法，此处常见的有<strong>Diffusion模型</strong>，<strong>GAN</strong>等。我曾部署并使用过<strong>Stable Diffusion</strong></p>
+<p>目标 <strong>函数</strong> —即为前人发的所有论文。</p>
+<p>不过我们依旧可以进一步思考：</p>
+<p>脑电信号经过简单预处理，得到的是脑电信号；生图模型接受的输入，应当有固定的格式。</p>
+<p>那么如何衔接处理后的脑电信号与生图模型的输入？
+此处则需要请出我们的<strong>CLIP模型</strong>。</p>
+<p>于是对问题做进一步简化：</p>
+<p><strong>脑电信号（输入）-&gt; 中间信号 -&gt; 图像输出</strong></p>
+<p>称第一个过程为<strong>Encode</strong>，第二个过程为<strong>Decode</strong>。</p>
+<p>此处参考了DreamDiffusion里的这张图：</p>
+<p><img src="./notes1/dd1.jpg" alt="项目截图"></p>
+<p><del>(<em>图片暂时没有调出来，后面有空再调</em> )</del></p>
+<p>至此，完成对问题的基本理解。</p>
+</div>
+    <footer class="article-footer"><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
+    <a
+      class="article-category-link"
+      href="/categories/%e5%ad%a6%e6%9c%af%e7%a0%94%e7%a9%b6"
+      data-aos="zoom-in"
+      >学术研究</a
+    >
+    </li></ul>
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/esrt"
+        rel="tag"
+        >ESRT</a
+      >
+    </li><li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/%e8%84%91%e7%94%b5%e5%9b%be%e5%83%8f"
+        rel="tag"
+        >脑电图像</a
+      >
+    </li></ul>
+</footer>
+  </div><nav
+    id="article-nav"
+    aria-label="Article navigation"
+    data-aos="fade-up"
+  ><div class="article-nav-link-wrap left"><img
+            data-src="/images/post-card.webp"
+            data-sizes="auto"
+            alt="Hello Hugo"
+            class="lazyload"
+          /><a
+          href="/post/hello-hugo/"
+          aria-label="前一篇:Hello Hugo"
+          title="前一篇:Hello Hugo"
+        ></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">Hello Hugo</h3>
+      </div></nav></article></section>
+        </div><footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info"><div>
+      <span class="icon-copyright"></span>2026<span class="footer-info-sep rotate"></span>Pausomn
+    </div><div>
+        基于&nbsp;<a
+          href="https://gohugo.io/"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Hugo</a
+        >&nbsp;Theme.<a
+          href="https://github.com/D-Sketon/hugo-theme-reimu"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Reimu</a
+        >
+      </div><div>
+        <span class="icon-brush"
+          >&nbsp;1.9k</span
+        >
+        &nbsp;|&nbsp;
+        <span class="icon-coffee">&nbsp;00:06</span>
+      </div><div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv"
+          >总访问量&nbsp;<span
+            id="busuanzi_value_site_pv"
+          ></span
+        ></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv"
+          >总访客量&nbsp;<span
+            id="busuanzi_value_site_uv"
+          ></span
+        ></span>
+      </div></div>
+</footer>
+<div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div><div id="mask" class="hide"></div>
+      </div><nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap"><div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class">
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#遇到不熟悉的项目">遇到不熟悉的项目</a></li>
+    <li><a href="#要学前人的智慧">要学前人的智慧</a></li>
+    <li><a href="#学习是消灭未知的途径">学习是消灭未知的途径</a></li>
+    <li><a href="#学完回来再看">学完回来再看</a></li>
+    <li><a href="#数学建模分析">数学建模分析</a></li>
+  </ul>
+</nav>
+</div></div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.webp"
+    data-sizes="auto"
+    alt="Pausomn"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">Pausomn</div>
+  <div class="sidebar-description">旅程总有一天会迎来终点，不必匆忙</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div><div class="sidebar-state-number">3</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>分类</div>
+    <div class="sidebar-state-number">
+      2
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>标签</div>
+    <div class="sidebar-state-number">3</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-bilibili sidebar-social-icon">
+        <a
+          href="https://space.bilibili.com/337420173"
+          itemprop="url"
+          target="_blank"
+          aria-label="bilibili"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-github sidebar-social-icon">
+        <a
+          href="https://github.com/Pausomn"
+          itemprop="url"
+          target="_blank"
+          aria-label="github"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div><div class="icon-zhihu sidebar-social-icon">
+        <a
+          href="https://www.zhihu.com/people/returnxian-ren"
+          itemprop="url"
+          target="_blank"
+          aria-label="zhihu"
+          rel="noopener nofollow noreferrer"
+        ></a>
+      </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label=""
+      ></a><div class='sidebar-menu-icon icon '><img src="/images/cursor/home.png" alt="Home icon" class="" style="height: 1em;"></div><div class="sidebar-menu-link"></div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label=""
+      ></a><div class='sidebar-menu-icon icon '><img src="/images/cursor/file.png" alt="Archives icon" class="" style="height: 1em;"></div><div class="sidebar-menu-link"></div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label=""
+      ></a><div class='sidebar-menu-icon icon '><img src="/images/cursor/person1.png" alt="About icon" class="" style="height: 1em;"></div><div class="sidebar-menu-link"></div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="https://winter-raymond.github.io"
+        aria-label=""
+      ></a><div class='sidebar-menu-icon icon '><img src="/images/cursor/friend.png" alt="Friend icon" class="" style="height: 1em;"></div><div class="sidebar-menu-link"></div>
+    </div></div></div></div><div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div></nav>
+</div><script
+    src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"
+    
+    
+    
+    
+    integrity="sha384-3gT/vsepWkfz/ff7PpWNUeMzeWoH3cDhm/A8jM7ouoAK0/fP/9bcHHR5kHq2nf&#43;e" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"
+    
+    
+    
+    
+    integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/material-theme@1.0.0/dist/material-theme.umd.js"
+    
+    
+    
+    
+    integrity="sha384-vLev0II0HKFaxkcm&#43;/7kX5IGwVFBASkGchU311wmU/veIj2bB0UcBkQbW6yw2asK" crossorigin="anonymous"></script><script src="/js/main.js"  ></script><script src="/js/aos.js"  ></script><script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", aosInit);
+    } else {
+      aosInit();
+    }
+  </script><script src="/js/pjax_main.js" data-pjax ></script><script>
+  var setupFirework = () => {
+    if (! false  || !window.matchMedia('(max-width: 768px)').matches) {
+      if (window.firework) {
+        const options = JSON.parse("{\"excludeelements\":[\"a\",\"button\"],\"particles\":[{\"colors\":[\"var(--red-1)\",\"var(--red-2)\",\"var(--red-3)\",\"var(--red-4)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"emit\"],\"number\":20,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.3,0.5],\"radius\":[16,32]}},{\"colors\":[\"var(--red-0)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"diffuse\"],\"number\":1,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.2,0.5],\"lineWidth\":6,\"radius\":20}}]}");
+        options.excludeElements = options.excludeelements;
+        delete options.excludeelements;
+        window.firework(options);
+      }
+    }
+  }
+</script><script
+    src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js"
+    defer
+    
+    
+    onload="setupFirework()"
+    integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8&#43;pUoWX8n1rgq282T" crossorigin="anonymous"></script>
+
+<div id="lazy-script">
+  <div><script data-pjax>
+        window.REIMU_POST = {
+          author: "Pausomn",
+          title: "从零开始搓脑电：理解题意【ESRT项目笔记】",
+          url: "http:\/\/localhost:1313\/post\/notes1\/",
+          description: "博主在进行零一学院的ESRT(Enhanced Student Research Training)项目时选了这样一个课题：脑电图像和视频生成\n项目描述：\n本项目依托EEG视觉生成领域的核心研究理念，探索从脑电图像到动态视频的直接跨模态生成。借鉴其“无需文本中转”的意念可视化思路，突破EEG信号噪声、信息有限等固有挑战，构建大模型实现脑电表征与动态视觉内容的深层映射，为“所想即所见”的进阶探索提供新方向。\n",
+          cover: "http:\/\/localhost:1313\/images\/life1.webp",
+        };
+      </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
+          if (_$$(`${gallery} ${children}`).length > 0) {
+            new PhotoSwipeLightbox({
+              gallery,
+              children,pswpModule: () => safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8\u002boTJ7m3DfYEWX1fu1scuS4\u002bs")}).init();
+          }
+        }
+        const pswp = () => {
+          initPswp('.article-entry', 'a.article-gallery-item');
+          initPswp('.article-gallery', 'a.article-gallery-item');
+        }
+        pswp()
+      </script></div>
+</div><script
+    src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js"
+    
+    async
+    
+    
+    integrity="sha384-0M75wtSkhjIInv4coYlaJU83&#43;OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id&#43;S" crossorigin="anonymous"></script><script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script><script>
+  const reimuCopyright = String.raw`
+   ______     ______     __     __    __     __  __    
+  /\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+  \ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+   \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+    \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                    
+  `;
+  console.log(String.raw`%c ${reimuCopyright}`, "color: #ff5252;");
+  console.log(
+    "%c Theme.Reimu" + " %c https://github.com/D-Sketon/hugo-theme-reimu ",
+    "color: white; background: #ff5252; padding:5px 0;",
+    "padding:4px;border:1px solid #ff5252;",
+  );
+</script></body>
+</html>

@@ -3,15 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-06-05T00:15:05+08:00</lastmod>
+    <lastmod>2026-06-24T15:30:00+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/hello-hugo/</loc>
-    <lastmod>2026-06-05T00:15:05+08:00</lastmod>
+    <loc>http://localhost:1313/tags/esrt/</loc>
+    <lastmod>2026-06-24T15:30:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-06-05T00:15:05+08:00</lastmod>
+    <lastmod>2026-06-24T15:30:00+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-06-24T15:30:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/notes1/</loc>
+    <lastmod>2026-06-24T15:30:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E8%84%91%E7%94%B5%E5%9B%BE%E5%83%8F/</loc>
+    <lastmod>2026-06-24T15:30:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/%E5%AD%A6%E6%9C%AF%E7%A0%94%E7%A9%B6/</loc>
+    <lastmod>2026-06-24T15:30:00+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/hello-hugo/</loc>
     <lastmod>2026-06-05T00:15:05+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E6%97%A5%E5%B8%B8/</loc>

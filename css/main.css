@@ -1,11 +1,11 @@
 @charset "UTF-8";
 :root {
-  --footer-icon: url(../images/taichi.png);
-  --top-icon: url(../images/taichi.png);
-  --sponsor-icon: url(../images/taichi.png);
-  --cursor-default: url(../images/cursor/reimu-cursor-default.png), auto;
-  --cursor-pointer: url(../images/cursor/reimu-cursor-pointer.png), pointer;
-  --cursor-text: url(../images/cursor/reimu-cursor-text.png), text;
+  --footer-icon: url(../images/taichi-blue.png);
+  --top-icon: url(../images/taichi-blue.png);
+  --sponsor-icon: url(../images/taichi-blue.png);
+  --cursor-default: url(../images/cursor/elaina-cursor-default.png), auto;
+  --cursor-pointer: url(../images/cursor/elaina-cursor-pointer.png), pointer;
+  --cursor-text: url(../images/cursor/elaina-cursor-text.png), text;
 }
 
 :root {
@@ -329,6 +329,14 @@ body [data-aos="zoom-in"] {
 
 .icon-github:before {
   content: "\e619";
+}
+
+.icon-bilibili:before {
+  content: "\e603";
+}
+
+.icon-zhihu:before {
+  content: "\e62e";
 }
 
 .sidebar-toc-btn:before {
@@ -3141,6 +3149,22 @@ mjx-container::-webkit-scrollbar {
 
 .sidebar-social-icon:hover {
   transform: scale(1.2);
+}
+
+.icon-github {
+  color: #191717;
+}
+
+[data-theme="dark"] .icon-github {
+  color: #bc88ff;
+}
+
+.icon-bilibili {
+  color: #00a1d6;
+}
+
+.icon-zhihu {
+  color: #0084ff;
 }
 
 .sidebar-menu {
